@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/beta-pages/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/beta-pages/static/js/main.b53a2d2a.chunk.js",
+    "main.js.map": "/beta-pages/static/js/main.b53a2d2a.chunk.js.map",
+    "runtime-main.js": "/beta-pages/static/js/runtime-main.de91ae7f.js",
+    "runtime-main.js.map": "/beta-pages/static/js/runtime-main.de91ae7f.js.map",
+    "static/js/2.cfc70f74.chunk.js": "/beta-pages/static/js/2.cfc70f74.chunk.js",
+    "static/js/2.cfc70f74.chunk.js.map": "/beta-pages/static/js/2.cfc70f74.chunk.js.map",
+    "static/js/3.bbd3b815.chunk.js": "/beta-pages/static/js/3.bbd3b815.chunk.js",
+    "static/js/3.bbd3b815.chunk.js.map": "/beta-pages/static/js/3.bbd3b815.chunk.js.map",
+    "index.html": "/beta-pages/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/beta-pages/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.cfc70f74.chunk.js.LICENSE.txt": "/beta-pages/static/js/2.cfc70f74.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/beta-pages/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de91ae7f.js",
+    "static/js/2.cfc70f74.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.b53a2d2a.chunk.js"
+  ]
+}
