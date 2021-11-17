@@ -77,13 +77,13 @@ const Balances: React.FC = () => {
 
   useEffect(() => {
     async function fetchTotalSupply() {
-      const supply = await getBroilerPlusSupply(broilerPlus)
+      const supply = await getSushiSupply(sushi)
       setTotalSupply(supply)
     }
     if (sushi) {
       fetchTotalSupply()
     }
-  }, [broilerPlus, setTotalSupply])
+  }, [sushi, setTotalSupply])
 
   return (
     <StyledWrapper>
@@ -94,9 +94,9 @@ const Balances: React.FC = () => {
               <SushiIcon />
               <Spacer />
               <div style={{ flex: 1 }}>
-                <Label text="Your BroilerPlus Balance" />
+                <Label text="Your SUSHI Balance" />
                 <Value
-                  value={!!account ? getBalanceNumber(broilerPlusBalance) : 'Locked'}
+                  value={!!account ? getBalanceNumber(sushiBalance) : 'Locked'}
                 />
               </div>
             </StyledBalance>
@@ -105,7 +105,7 @@ const Balances: React.FC = () => {
         <Footnote>
           Pending harvest
           <FootnoteValue>
-            <PendingRewards /> BroilerPlus
+            <PendingRewards /> SUSHI
           </FootnoteValue>
         </Footnote>
       </Card>
@@ -113,14 +113,14 @@ const Balances: React.FC = () => {
 
       <Card>
         <CardContent>
-          <Label text="Total BroilerPlus Supply" />
+          <Label text="Total SUSHI Supply" />
           <Value
             value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
           />
         </CardContent>
         <Footnote>
           New rewards per block
-          <FootnoteValue>1,000 BroilerPlus</FootnoteValue>
+          <FootnoteValue>1,000 SUSHI</FootnoteValue>
         </Footnote>
       </Card>
     </StyledWrapper>

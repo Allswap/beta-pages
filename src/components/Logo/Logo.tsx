@@ -6,7 +6,7 @@ import brt from '../../assets/img/brt.png'
 const Logo: React.FC = () => {
   return (
     <StyledLogo to="/">
-      <img src={btr} height="32" style={{ marginTop: -4 }} />
+      <img src={brt} height="32" style={{ marginTop: -4 }} />
       <StyledText>
         AllSwap <MasterMegaText>MasterMega</MasterMegaText>
       </StyledText>
