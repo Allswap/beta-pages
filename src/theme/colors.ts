@@ -13,6 +13,8 @@ export const red = {
 }
 
 export const grey = {
+  50: '#B0BC00',
+  60: '#494D19',
   100: '#f7f4f2',
   200: '#f0e9e7',
   300: '#e2d6cf',
