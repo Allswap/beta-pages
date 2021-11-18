@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import brt from '../../assets/img/brt.png'
+import asp from '../../assets/img/asp.png'
 
 const Logo: React.FC = () => {
   return (
     <StyledLogo to="/">
-      <img src={brt} height="32" style={{ marginTop: -4 }} />
+      <img src={asp} height="32" style={{ marginTop: -4 }} />
       <StyledText>
-        AllSwap <MasterMegaText>MasterMega</MasterMegaText>
+        AllSwap
       </StyledText>
     </StyledLogo>
   )
@@ -26,8 +26,8 @@ const StyledLogo = styled(Link)`
 `
 
 const StyledText = styled.span`
-  color: ${(props) => props.theme.color.grey[600]};
-  font-family: 'Reem Kufi', sans-serif;
+  color: ${(props) => props.theme.color.grey[700]};
+  font-family: 'Courier New', sans-serif;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -35,10 +35,6 @@ const StyledText = styled.span`
   @media (max-width: 400px) {
     display: none;
   }
-`
-
-const MasterMegaText = styled.span`
-  font-family: 'Kaushan Script', sans-serif;
 `
 
 export default Logo

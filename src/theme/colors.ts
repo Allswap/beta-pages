@@ -2,6 +2,7 @@ export const white = '#FFF'
 export const black = '#000'
 
 export const green = {
+  400: '#78B144',
   500: '##00d1810',
 }
 
@@ -18,5 +19,6 @@ export const grey = {
   400: '#aa9585',
   500: '#805e49',
   600: '#5b3926',
+  700: '#78B144',
   800: '#2d1e12',
 }
