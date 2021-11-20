@@ -91,7 +91,6 @@ const Balances: React.FC = () => {
         <CardContent>
           <StyledBalances>
             <StyledBalance>
-              <SushiIcon />
               <Spacer />
               <div style={{ flex: 1 }}>
                 <Label text="Your Broiler Balance" />
@@ -119,8 +118,8 @@ const Balances: React.FC = () => {
           />
         </CardContent>
         <Footnote>
-          New rewards per block
-          <FootnoteValue>1,0000 Broiler</FootnoteValue>
+          New rewards per second
+          <FootnoteValue>1,000 Broiler</FootnoteValue>
         </Footnote>
       </Card>
     </StyledWrapper>
@@ -130,7 +129,7 @@ const Balances: React.FC = () => {
 const Footnote = styled.div`
   font-size: 14px;
   padding: 8px 20px;
-  color: ${(props) => props.theme.color.grey[400]};
+  color: ${(props) => props.theme.color.grey[20]};
   border-top: solid 1px ${(props) => props.theme.color.grey[300]};
 `
 const FootnoteValue = styled.div`
