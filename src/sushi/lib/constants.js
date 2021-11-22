@@ -80,7 +80,7 @@ export const supportedPools = [
     name: 'Sushi Party!',
     symbol: 'SUSHI-ETH UNI-V2 LP',
     tokenSymbol: 'SUSHI',
-    icon: '🍣',
+    icon: '🐔',
   },
   {
     pid: 0,
@@ -185,122 +185,5 @@ export const supportedPools = [
     symbol: 'AMPL-ETH UNI-V2 LP',
     tokenSymbol: 'AMPL',
     icon: '🐥',
-  },
-  {
-    pid: 4,
-    lpAddresses: {
-      1: '0xcffdded873554f362ac02f8fb1f02e5ada10516f',
-    },
-    tokenAddresses: {
-      1: '0xc00e94cb662c3520282e6f5717214004a7f26888',
-    },
-    name: 'Compound Truffle',
-    symbol: 'COMP-ETH UNI-V2 LP',
-    tokenSymbol: 'COMP',
-    icon: '🍄',
-  },
-  {
-    pid: 5,
-    lpAddresses: {
-      1: '0xab3f9bf1d81ddb224a2014e98b238638824bcf20',
-    },
-    tokenAddresses: {
-      1: '0x80fb784b7ed66730e8b1dbd9820afd29931aab03',
-    },
-    name: 'Aave Boar',
-    symbol: 'LEND-ETH UNI-V2 LP',
-    tokenSymbol: 'LEND',
-    icon: '🐗',
-  },
-  {
-    pid: 6,
-    lpAddresses: {
-      1: '0x43ae24960e5534731fc831386c07755a2dc33d47',
-    },
-    tokenAddresses: {
-      1: '0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f',
-    },
-    name: 'Synthetic Snake',
-    symbol: 'SNX-ETH UNI-V2 LP',
-    tokenSymbol: 'SNX',
-    icon: '🐍',
-  },
-  {
-    pid: 11,
-    lpAddresses: {
-      1: '0x2fdbadf3c4d5a8666bc06645b8358ab803996e28',
-    },
-    tokenAddresses: {
-      1: '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e',
-    },
-    name: 'YFI Whale',
-    symbol: 'YFI-ETH UNI-V2 LP',
-    tokenSymbol: 'YFI',
-    icon: '🐋',
-  },
-  {
-    pid: 13,
-    lpAddresses: {
-      1: '0x8bd1661da98ebdd3bd080f0be4e6d9be8ce9858c',
-    },
-    tokenAddresses: {
-      1: '0x408e41876cccdc0f92210600ef50372656052a38',
-    },
-    name: 'REN Rhino',
-    symbol: 'REN-ETH UNI-V2 LP',
-    tokenSymbol: 'REN',
-    icon: '🦏',
-  },
-  {
-    pid: 14,
-    lpAddresses: {
-      1: '0xaad22f5543fcdaa694b68f94be177b561836ae57',
-    },
-    tokenAddresses: {
-      1: '0x68A118Ef45063051Eac49c7e647CE5Ace48a68a5',
-    },
-    name: 'BASED Bull',
-    symbol: 'BASE-sUSD UNI-V2 LP',
-    tokenSymbol: 'BASED',
-    icon: '🐂',
-  },
-  {
-    pid: 15,
-    lpAddresses: {
-      1: '0xcc3d1ecef1f9fd25599dbea2755019dc09db3c54',
-    },
-    tokenAddresses: {
-      1: '0x476c5E26a75bd202a9683ffD34359C0CC15be0fF',
-    },
-    name: 'SRM Shark',
-    symbol: 'SRM-ETH UNI-V2 LP',
-    tokenSymbol: 'SRM',
-    icon: '🦈',
-  },
-  {
-    pid: 16,
-    lpAddresses: {
-      1: '0xa5904961f61bae7c4dd8478077556c91bf291cfd',
-    },
-    tokenAddresses: {
-      1: '0xaba8cac6866b83ae4eec97dd07ed254282f6ad8a',
-    },
-    name: 'SUSHIv2 SUSHI',
-    symbol: 'SUSHIv2-ETH UNI-V2 LP',
-    tokenSymbol: 'SUSHIv2',
-    icon: '🍠',
-  },
-  {
-    pid: 17,
-    lpAddresses: {
-      1: '0x3da1313ae46132a397d90d95b1424a9a7e3e0fce',
-    },
-    tokenAddresses: {
-      1: '0xD533a949740bb3306d119CC777fa900bA034cd52',
-    },
-    name: 'CRV Crocodile',
-    symbol: 'CRV-ETH UNI-V2 LP',
-    tokenSymbol: 'CRV',
-    icon: '🐊',
   },
 ]
