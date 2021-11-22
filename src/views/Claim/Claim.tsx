@@ -13,7 +13,7 @@ import { getContract } from '../../utils/erc20'
 import Harvest from './components/Harvest'
 import Stake from './components/Stake'
 
-const Farm: React.FC = () => {
+const Claim: React.FC = () => {
   const { farmId } = useParams()
   const {
     pid,
