@@ -147,43 +147,4 @@ export const supportedPools = [
     tokenSymbol: 'UMA',
     icon: '🦑',
   },
-  {
-    pid: 9,
-    lpAddresses: {
-      1: '0xf421c3f2e695c2d4c0765379ccace8ade4a480d9',
-    },
-    tokenAddresses: {
-      1: '0xba11d00c5f74255f56a5e366f4f77f5a186d7f55',
-    },
-    name: 'Band-osaurus',
-    symbol: 'BAND-ETH UNI-V2 LP',
-    tokenSymbol: 'BAND',
-    icon: '🦖',
-  },
-  {
-    pid: 8,
-    lpAddresses: {
-      1: '0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974',
-    },
-    tokenAddresses: {
-      1: '0x514910771af9ca656af840dff83e8264ecf986ca',
-    },
-    name: 'Toadie Marine',
-    symbol: 'LINK-ETH UNI-V2 LP',
-    tokenSymbol: 'LINK',
-    icon: '🐸',
-  },
-  {
-    pid: 10,
-    lpAddresses: {
-      1: '0xc5be99a02c6857f9eac67bbce58df5572498f40c',
-    },
-    tokenAddresses: {
-      1: '0xd46ba6d942050d489dbd938a2c909a5d5039a161',
-    },
-    name: 'Ample Chicks',
-    symbol: 'AMPL-ETH UNI-V2 LP',
-    tokenSymbol: 'AMPL',
-    icon: '🐥',
-  },
-]
+ ]
