@@ -33,6 +33,21 @@ const Home: React.FC = () => {
       >
         <Button text="🔪 See the Menu" to="/farms" variant="secondary" />
       </div>
+      <Spacer size="lg" />
+      <StyledInfo>
+        <b>Allswap</b> <br/>is an advanced cross-chains swap, earn stack yields, NTF marketplace all on one decentralized DeFi platform.
+        <br/> Decentralized trading protocol (AMM) guaranteed liquidity for users and many multi-chains applications.
+        <br/>Turn to a self-boss, with allswap platform home of DeFi.
+        <br/><b>Allocation</b><br/>One quadrillion BroilerPlus tokens have been minted at the genesis block.
+       <ul>
+    <li>60% to BroilerPlus LP mining program.</li>
+    <li>24% to team members and future employees.</li>
+   <li> 10% to community/airdrop.</li>
+   <li> 5% to bug bounty.</li>
+    <li>1% to advisors.</li>
+</ul>
+      </StyledInfo>
+      <Spacer size="lg" />
     </Page>
   )
 }
