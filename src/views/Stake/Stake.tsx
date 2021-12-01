@@ -57,7 +57,9 @@ const Farm: React.FC = () => {
             subtitle="0.05% of all AllSwap trades are rewarded to Broiler stakers"
           />
           {/* <FarmCards /> */}
-          <div>TBD</div>
+          <div>
+          <StyledInfo>Coming Soon</StyledInfo>
+            </div>
         </>
       ) : (
         <div
@@ -106,9 +108,9 @@ const StyledCardWrapper = styled.div`
   }
 `
 
-const StyledInfo = styled.h3`
-  color: ${(props) => props.theme.color.grey[400]};
-  font-size: 16px;
+const StyledInfo = styled.h2`
+  color: ${(props) => props.theme.color.grey[60]};
+  font-size: 24px;
   font-weight: 400;
   margin: 0;
   padding: 0;

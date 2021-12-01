@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
-
+import styled from 'styled-components'
 import brt from '../../assets/img/brt.png'
 
 import Button from '../../components/Button'
@@ -30,7 +30,10 @@ const Farms: React.FC = () => {
                 subtitle="Earn Broiler tokens by staking Quickswap V2 LP Tokens."
                 title="Select Your Favorite Dishes"
               />
-              <FarmCards />
+              {/* <FarmCards /> */}
+              <div>
+              <StyledInfo>Coming Soon</StyledInfo>
+                </div>
             </Route>
             <Route path={`${path}/:farmId`}>
               <Farm />
@@ -56,4 +59,16 @@ const Farms: React.FC = () => {
   )
 }
 
+const StyledInfo = styled.h2`
+  color: ${(props) => props.theme.color.grey[60]};
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  > b {
+    color: ${(props) => props.theme.color.grey[40]};
+  }
+`
 export default Farms
