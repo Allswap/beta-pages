@@ -118,7 +118,7 @@ const Balances: React.FC = () => {
           />
         </CardContent>
         <Footnote>
-          New rewards per second
+          New rewards per block
           <FootnoteValue>1,000 Broiler</FootnoteValue>
         </Footnote>
       </Card>

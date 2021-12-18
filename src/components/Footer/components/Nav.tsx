@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
       </StyledLink>
       <StyledLink
         target="_blank"
-        href="https://info.quickswap.exchange/pair/0xc445b18b3ff85e0691fe416ad91e456f8697b166"
+        href="https://info.quickswap.exchange/#/pair/0xc445b18b3ff85e0691fe416ad91e456f8697b166"
       >
         Quickswap BRT-WMATIC
       </StyledLink>
