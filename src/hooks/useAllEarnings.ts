@@ -4,16 +4,16 @@ import { provider } from 'web3-core'
 import BigNumber from 'bignumber.js'
 import { useWallet } from 'use-wallet'
 
-import { getEarned, getMasterChefContract, getFarms } from '../sushi/utils'
-import useSushi from './useSushi'
+import { getEarned, getMasterChefContract, getFarms } from '../allswap/utils'
+import useAllSwap from './useAllSwap'
 import useBlock from './useBlock'
 
 const useAllEarnings = () => {
   const [balances, setBalance] = useState([] as Array<BigNumber>)
   const { account }: { account: string; ethereum: provider } = useWallet()
-  const sushi = useSushi()
-  const farms = getFarms(sushi)
-  const masterChefContract = getMasterChefContract(sushi)
+  const allswap = useAllSwap()
+  const farms = getFarms(allswap)
+  const masterChefContract = getMasterChefContract(allswap)
   const block = useBlock()
 
   const fetchAllBalances = useCallback(async () => {
@@ -23,13 +23,13 @@ const useAllEarnings = () => {
       ),
     )
     setBalance(balances)
-  }, [account, masterChefContract, sushi])
+  }, [account, masterChefContract, allswap])
 
   useEffect(() => {
-    if (account && masterChefContract && sushi) {
+    if (account && masterChefContract && allswap) {
       fetchAllBalances()
     }
-  }, [account, block, masterChefContract, setBalance, sushi])
+  }, [account, block, masterChefContract, setBalance, allswap])
 
   return balances
 }

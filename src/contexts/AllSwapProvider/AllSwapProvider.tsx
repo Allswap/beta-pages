@@ -2,35 +2,35 @@ import React, { createContext, useEffect, useState } from 'react'
 
 import { useWallet } from 'use-wallet'
 
-import { Sushi } from '../../sushi'
+import { AllSwap } from '../../allswap'
 
-export interface SushiContext {
-  sushi?: typeof Sushi
+export interface AllSwapContext {
+  allswap?: typeof AllSwap
 }
 
-export const Context = createContext<SushiContext>({
-  sushi: undefined,
+export const Context = createContext<AllSwapContext>({
+  allswap: undefined,
 })
 
 declare global {
   interface Window {
-    sushisauce: any
+    allswapsauce: any
   }
 }
 
-const SushiProvider: React.FC = ({ children }) => {
+const AllSwapProvider: React.FC = ({ children }) => {
   const { ethereum }: { ethereum: any } = useWallet()
-  const [sushi, setSushi] = useState<any>()
+  const [allswap, setAllswap] = useState<any>()
 
   // @ts-ignore
-  window.sushi = sushi
+  window.allswap = allswap
   // @ts-ignore
   window.eth = ethereum
 
   useEffect(() => {
     if (ethereum) {
       const chainId = Number(ethereum.chainId)
-      const sushiLib = new Sushi(ethereum, chainId, false, {
+      const allswapLib = new AllSwap(ethereum, chainId, false, {
         defaultAccount: ethereum.selectedAddress,
         defaultConfirmations: 1,
         autoGasMultiplier: 1.5,
@@ -40,12 +40,12 @@ const SushiProvider: React.FC = ({ children }) => {
         accounts: [],
         ethereumNodeTimeout: 10000,
       })
-      setSushi(sushiLib)
-      window.sushisauce = sushiLib
+      setAllswap(allswapLib)
+      window.allswapsauce = allswapLib
     }
   }, [ethereum])
 
-  return <Context.Provider value={{ sushi }}>{children}</Context.Provider>
+  return <Context.Provider value={{ allswap }}>{children}</Context.Provider>
 }
 
-export default SushiProvider
+export default AllSwapProvider

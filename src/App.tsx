@@ -8,7 +8,7 @@ import TopBar from './components/TopBar'
 import FarmsProvider from './contexts/Farms'
 import ModalsProvider from './contexts/Modals'
 import TransactionProvider from './contexts/Transactions'
-import SushiProvider from './contexts/SushiProvider'
+import AllSwapProvider from './contexts/AllSwapProvider'
 import useModal from './hooks/useModal'
 import theme from './theme'
 import Farms from './views/Farms'
@@ -57,13 +57,13 @@ const Providers: React.FC = ({ children }) => {
           walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
         }}
       >
-        <SushiProvider>
+        <AllSwapProvider>
           <TransactionProvider>
             <FarmsProvider>
               <ModalsProvider>{children}</ModalsProvider>
             </FarmsProvider>
           </TransactionProvider>
-        </SushiProvider>
+        </AllSwapProvider>
       </UseWalletProvider>
     </ThemeProvider>
   )

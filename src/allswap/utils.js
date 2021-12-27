@@ -13,26 +13,26 @@ const GAS_LIMIT = {
   },
 }
 
-export const getMasterChefAddress = (sushi) => {
-  return sushi && sushi.masterChefAddress
+export const getMasterChefAddress = (allswap) => {
+  return allswap && allswap.masterChefAddress
 }
-export const getSushiAddress = (sushi) => {
-  return sushi && sushi.sushiAddress
+export const getAllswapAddress = (allswap) => {
+  return allswap && allswap.allswapAddress
 }
-export const getWethContract = (sushi) => {
-  return sushi && sushi.contracts && sushi.contracts.weth
-}
-
-export const getMasterChefContract = (sushi) => {
-  return sushi && sushi.contracts && sushi.contracts.masterChef
-}
-export const getSushiContract = (sushi) => {
-  return sushi && sushi.contracts && sushi.contracts.sushi
+export const getWethContract = (allswap) => {
+  return allswap && allswap.contracts && allswap.contracts.weth
 }
 
-export const getFarms = (sushi) => {
-  return sushi
-    ? sushi.contracts.pools.map(
+export const getMasterChefContract = (allswap) => {
+  return allswap && allswap.contracts && allswap.contracts.masterChef
+}
+export const getAllSwapContract = (allswap) => {
+  return allswap && allswap.contracts && allswap.contracts.allswap
+}
+
+export const getFarms = (allswap) => {
+  return allswap
+    ? allswap.contracts.pools.map(
         ({
           pid,
           name,
@@ -54,7 +54,7 @@ export const getFarms = (sushi) => {
           tokenSymbol,
           tokenContract,
           earnToken: 'sushi',
-          earnTokenAddress: sushi.contracts.sushi.options.address,
+          earnTokenAddress: allswap.contracts.allswap.options.address,
           icon,
         }),
       )
@@ -122,8 +122,8 @@ export const approve = async (lpContract, masterChefContract, account) => {
     .send({ from: account })
 }
 
-export const getSushiSupply = async (sushi) => {
-  return new BigNumber(await sushi.contracts.sushi.methods.totalSupply().call())
+export const getAllSwapSupply = async (allswap) => {
+  return new BigNumber(await allswap.contracts.sushi.methods.totalSupply().call())
 }
 
 export const stake = async (masterChefContract, pid, amount, account) => {

@@ -13,11 +13,11 @@ import WalletProviderModal from '../../components/WalletProviderModal'
 
 import useModal from '../../hooks/useModal'
 
-import useSushi from '../../hooks/useSushi'
+import useAllSwap from '../../hooks/useAllSwap'
 import useFarm from '../../hooks/useFarm'
 import useRedeem from '../../hooks/useRedeem'
 import { getContract } from '../../utils/erc20'
-import { getMasterChefContract } from '../../sushi/utils'
+import { getMasterChefContract } from '../../allswap/utils'
 
 import Harvest from './components/Harvest'
 import Stake from './components/Stake'
@@ -30,14 +30,14 @@ const Farm: React.FC = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const sushi = useSushi()
+  const allswap = useAllSwap()
   const { ethereum } = useWallet()
 
   // const lpContract = useMemo(() => {
   //   return getContract(ethereum as provider, lpTokenAddress)
   // }, [ethereum, lpTokenAddress])
 
-  // const { onRedeem } = useRedeem(getMasterChefContract(sushi))
+  // const { onRedeem } = useRedeem(getMasterChefContract(allswap))
 
   // const lpTokenName = useMemo(() => {
   //   return lpToken.toUpperCase()
