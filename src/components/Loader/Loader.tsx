@@ -11,7 +11,7 @@ const Loader: React.FC<LoaderProps> = ({ text }) => {
   return (
     <StyledLoader>
       <CardIcon>
-        <StyledSwap>🍣</StyledSwap>
+        <StyledSwap>🐔</StyledSwap>
       </CardIcon>
       {!!text && <StyledText>{text}</StyledText>}
     </StyledLoader>
