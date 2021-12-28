@@ -14,8 +14,8 @@ import useAllStakedValue, {
   StakedValue,
 } from '../../../hooks/useAllStakedValue'
 import useFarms from '../../../hooks/useFarms'
-import useSushi from '../../../hooks/useSushi'
-import { getEarned, getMasterChefContract } from '../../../sushi/utils'
+import useAllSwap from '../../../hooks/useAllSwap'
+import { getEarned, getMasterChefContract } from '../../../allswap/utils'
 import { bnToDec } from '../../../utils'
 
 interface FarmWithStakedValue extends Farm, StakedValue {
@@ -24,20 +24,21 @@ interface FarmWithStakedValue extends Farm, StakedValue {
 
 const FarmCards: React.FC = () => {
   const [farms] = useFarms()
+  console.log('farms666',farms)
   const { account } = useWallet()
   const stakedValue = useAllStakedValue()
 
-  const sushiIndex = farms.findIndex(
+  const allswapIndex = farms.findIndex(
     ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
   )
 
-  const sushiPrice =
-    sushiIndex >= 0 && stakedValue[sushiIndex]
-      ? stakedValue[sushiIndex].tokenPriceInWeth
+  const allswapPrice =
+    allswapIndex >= 0 && stakedValue[allswapIndex]
+      ? stakedValue[allswapIndex].tokenPriceInWeth
       : new BigNumber(0)
 
   const BLOCKS_PER_YEAR = new BigNumber(2336000)
-  const SUSHI_PER_BLOCK = new BigNumber(1000)
+  const ALLSWAP_PER_BLOCK = new BigNumber(1000)
 
   const rows = farms.reduce<FarmWithStakedValue[][]>(
     (farmRows, farm, i) => {
@@ -45,8 +46,8 @@ const FarmCards: React.FC = () => {
         ...farm,
         ...stakedValue[i],
         apy: stakedValue[i]
-          ? sushiPrice
-              .times(SUSHI_PER_BLOCK)
+          ? allswapPrice
+              .times(ALLSWAP_PER_BLOCK)
               .times(BLOCKS_PER_YEAR)
               .times(stakedValue[i].poolWeight)
               .div(stakedValue[i].totalWethValue)
@@ -95,7 +96,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
   const { account } = useWallet()
   const { lpTokenAddress } = farm
-  const sushi = useSushi()
+  const allswap = useAllSwap()
 
   const renderer = (countdownProps: CountdownRenderProps) => {
     const { hours, minutes, seconds } = countdownProps
@@ -111,18 +112,18 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
   useEffect(() => {
     async function fetchEarned() {
-      if (sushi) return
+      if (allswap) return
       const earned = await getEarned(
-        getMasterChefContract(sushi),
+        getMasterChefContract(allswap),
         lpTokenAddress,
         account,
       )
       setHarvestable(bnToDec(earned))
     }
-    if (sushi && account) {
+    if (allswap && account) {
       fetchEarned()
     }
-  }, [sushi, lpTokenAddress, account, setHarvestable])
+  }, [allswap, lpTokenAddress, account, setHarvestable])
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
 

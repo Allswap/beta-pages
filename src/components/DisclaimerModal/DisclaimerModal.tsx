@@ -28,7 +28,7 @@ const DisclaimerModal: React.FC<DisclaimerModal> = ({
         <div>
           <p>Audits: None.</p>
           <p>
-            While the initial creators of the Sushi protocol have made
+            While the initial creators of the AllSwap protocol have made
             reasonable efforts to attempt to ensure the security of the
             contracts, including forking much of the codebase from existing
             well-audited projects and soliciting review from friends, nothing
@@ -44,9 +44,9 @@ const DisclaimerModal: React.FC<DisclaimerModal> = ({
     } else {
       return (
         <div>
-          <p>Attention SUSHI Uniswap LPs</p>
+          <p>Attention ALLSWAP Uniswap LPs</p>
           <p>
-            The only Uniswap pool that is compatible with SUSHI is SUSHI/yCRV
+            The only Uniswap pool that is compatible with ALLSWAP is ALLSWAP/yCRV
             (Curve yPool tokens)
           </p>
           <p>Providing liquidity for other Uniswap pools is dangerous</p>

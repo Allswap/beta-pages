@@ -39,7 +39,7 @@ export const addressMap = {
 }
 
 export const contractAddresses = {
-  sushi: {
+  allswap: {
     1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
   },
   masterChef: {
@@ -77,9 +77,9 @@ export const supportedPools = [
     tokenAddresses: {
       1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
     },
-    name: 'Sushi Party!',
-    symbol: 'SUSHI-ETH UNI-V2 LP',
-    tokenSymbol: 'SUSHI',
+    name: 'AllSwap Party!',
+    symbol: 'ALLSWAP-ETH UNI-V2 LP',
+    tokenSymbol: 'ALLSWAP',
     icon: '🐔',
   },
   {

@@ -1,25 +1,25 @@
 import { useCallback } from 'react'
 
-import useSushi from './useSushi'
+import useAllSwap from './useAllSwap'
 import { useWallet } from 'use-wallet'
 
-import { stake, getMasterChefContract } from '../sushi/utils'
+import { stake, getMasterChefContract } from '../allswap/utils'
 
 const useStake = (pid: number) => {
   const { account } = useWallet()
-  const sushi = useSushi()
+  const allswap = useAllSwap()
 
   const handleStake = useCallback(
     async (amount: string) => {
       const txHash = await stake(
-        getMasterChefContract(sushi),
+        getMasterChefContract(allswap),
         pid,
         amount,
         account,
       )
       console.log(txHash)
     },
-    [account, pid, sushi],
+    [account, pid, allswap],
   )
 
   return { onStake: handleStake }
